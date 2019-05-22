@@ -1,0 +1,30 @@
+// Color
+$color-black: black;
+$color-white: white;
+
+// Link Color
+$link-color-a: $color-black;
+$link-color-b: $link-color-a;
+
+// Path
+$img-path: "../media/";
+
+$text-color-a: $color-black;
+
+$hover-speed-a: 0.25s;
+$hover-ease: ease-out;
+$hover-ease-b: ease-in-out;
+
+// Font Family
+$font-a: 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
+$font-b: 'Montserrat', sans-serif;
+$font-c: 'Montserrat', 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
+
+// Screen
+$breakpoint-pc-min: 769px;
+$breakpoint-sp: 768px;
+
+$modal-index: 10001;
+$header-index: 10000;
+$nav-index: 9999;
+$sprash-index: 9998;

@@ -1,0 +1,11 @@
+.pc-only {
+    @include max-screen($breakpoint-sp) {
+        display: none;
+    }
+}
+
+.sp-only {
+    @include min-screen($breakpoint-pc-min) {
+        display: none;
+    }
+}

@@ -1,0 +1,49 @@
+@mixin fs( $size, $importantFlg:false ) {
+  font-size: $size + px + if($importantFlg, ' !important', '');
+  font-size: $size/10 + rem + if($importantFlg, ' !important', '');
+}
+
+// clearfix
+@mixin cf {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin min-screen($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin screen($break-point-min, $break-point-max) {
+  @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+    @content;
+  }
+}
+
+@mixin sprite-responsive($sprite) {
+  $sheet-w: nth($sprite, 7);
+  $sheet-h: nth($sprite, 8);
+  $sprite-w: nth($sprite, 5);
+  $sprite-h: nth($sprite, 6);
+  $offset-x: nth($sprite, 1);
+  $offset-y: nth($sprite, 2);
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+  background-size: ($sheet-w / $sprite-w * 100 + 0%) ($sheet-h / $sprite-h * 100+ 0%);
+  background-position: ($offset-x / ($sheet-w - $sprite-w) * 100 + 0%) ($offset-y / ($sheet-h - $sprite-h) * 100 + 0%);
+  &:after{
+    content: '';
+    display: block;
+    padding-top: ($sprite-h / $sprite-w * 100 + 0%);
+  }
+}

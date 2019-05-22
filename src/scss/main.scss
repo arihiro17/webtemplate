@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@import "foundation/fonts";
+@import "foundation/variables";
+@import "foundation/mixins";
+@import "foundation/base";
+
+// 接頭辞
+// l_ Layout
+// c_ Component
+// p_ Project
+// u_ Utitlity
+// is_ State
+// js_ JavaScript
+
+/* Layout
+   ----------------------------------------------------------------- */
+@import "layout/layout";
+
+/* Component
+   ----------------------------------------------------------------- */
+@import "object/component/btn";
+@import "object/component/img";
+@import "object/component/list";
+@import "object/component/text";
+@import "object/component/title";
+
+/* Project
+   ----------------------------------------------------------------- */
+// @import "object/project/**/*.scss";
+
+
+/* Utitlity
+   ----------------------------------------------------------------- */
+// @import "object/utility/**/*.scss";
+@import "object/utility/utils";
